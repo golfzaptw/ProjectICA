@@ -16,10 +16,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/TC01_Verify Correct Alarm Message</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>bb594fd1-d00d-4a89-84a4-7a5675904a79</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC02_Verify Last Items In List</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>
