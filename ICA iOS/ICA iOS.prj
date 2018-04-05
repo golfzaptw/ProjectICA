@@ -4,5 +4,5 @@
    <name>ICA iOS</name>
    <tag></tag>
    <UUID>e35b7825-6125-4f25-831d-26598522ed11</UUID>
-   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeout>0</pageLoadTimeout>
 </Project>
