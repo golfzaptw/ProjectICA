@@ -8,7 +8,7 @@
    <useRalativeImagePath>false</useRalativeImagePath>
    <httpBody></httpBody>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://hooks.slack.com/services/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</restUrl>
+   <restUrl>https://hooks.slack.com/services/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</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
