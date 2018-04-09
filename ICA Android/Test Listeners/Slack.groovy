@@ -37,14 +37,13 @@ class Slack {
 			WS.sendRequest(slackMessage)
 		}
 	}
-	
 	@BeforeTestSuite
-	def notifyBeforeTestSuite(TestSuiteContext testSuiteContext) {
+	def notifyslackTestSuite(TestSuiteContext testSuiteContext){
 		def value = testSuiteContext.getTestSuiteId().split('/')
 		def result = value[value.size()-1]
-		slackMessage.setHttpBody('{"text": TestSuite Android : "' + result + ': Started"}"')
-		postToSlack()
-		
+		slackMessage.setHttpBody(	'{\
+										"text : "TestSuite Android : '+ result +' : Running"\
+									}')
 	}
 	
 //	@BeforeTestCase
@@ -67,18 +66,17 @@ class Slack {
 //		postToSlack()
 		if (!testCaseStatus.equals("PASSED")){
 			testSuiteStatus = "FAILED"
-			slackMessage.setHttpBody('{"text": "Test Android : ' + result + ': ' + testCaseStatus + '"}"')
+			slackMessage.setHttpBody('{"text": "Test Android : ' + result + ': ' + testCaseStatus + '"}')
 			postToSlack()
 		} 
 	}
 
-
-
 	@AfterTestSuite
-	def notifyAfterTestSuite(TestSuiteContext testSuiteContext) {
+	def notifyslackTestSuiteAfter(TestSuiteContext testSuiteContext){
 		def value = testSuiteContext.getTestSuiteId().split('/')
 		def result = value[value.size()-1]
-		slackMessage.setHttpBody('{"text": TestSuite Android : "' + result + ': ' + testSuiteStatus + '"}"')
-		postToSlack()
+		slackMessage.setHttpBody(	'{\
+										"text : "TestSuite Android : '+ result +' : ' + testSuiteStatus + '"\
+									}')
 	}
  }
