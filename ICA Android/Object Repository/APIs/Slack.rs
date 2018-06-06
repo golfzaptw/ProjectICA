@@ -9,6 +9,13 @@
    <httpBody>{
     &quot;text&quot; : &quot;Test Connect&quot;
 }</httpBody>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n    \&quot;text\&quot; : \&quot;Test Connect\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>https://hooks.slack.com/services/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</restUrl>
    <serviceType>RESTful</serviceType>

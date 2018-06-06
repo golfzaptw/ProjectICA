@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login05</name>
+   <tag>release 0.0.1</tag>
+   <comment>Search location project for find folder android apk.</comment>
+   <testCaseGuid>be6b9331-c41b-4fe2-bdec-56a1687ba51e</testCaseGuid>
+</TestCaseEntity>
