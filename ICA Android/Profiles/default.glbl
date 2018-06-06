@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/androidapp/stagingICA.apk'</initValue>
+      <name>ANDROID_APP</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
