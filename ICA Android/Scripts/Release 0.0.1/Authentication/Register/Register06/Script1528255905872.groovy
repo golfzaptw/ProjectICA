@@ -65,7 +65,7 @@ Mobile.waitForElementPresent(findTestObject('Register/btn/btn SubmitRegister'), 
 
 Mobile.tap(findTestObject('Register/btn/btn SubmitRegister'), 0)
 
-Mobile.scrollToText('Ihr Benutzername muss zwischen 8 und 30 Zeichen lang sein.', FailureHandling.STOP_ON_FAILURE)
+Mobile.scrollToText('Ihr Benutzername muss zwischen 6 und 30 Zeichen lang sein.', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.closeApplication()
 
