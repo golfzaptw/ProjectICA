@@ -57,15 +57,11 @@ Mobile.waitForElementPresent(findTestObject('Register/edt/edtRepass'), 0)
 
 Mobile.setText(findTestObject('Register/edt/edtRepass'), '12345678', 0)
 
-Mobile.waitForElementPresent(findTestObject('Register/checkbox/checkboxRecieveMail'), 0)
-
-Mobile.tap(findTestObject('Register/checkbox/checkboxRecieveMail'), 0)
-
 Mobile.waitForElementPresent(findTestObject('Register/btn/btn SubmitRegister'), 0)
 
 Mobile.tap(findTestObject('Register/btn/btn SubmitRegister'), 0)
 
-Mobile.waitForElementPresent(findTestObject('LoadingStage'), 0)
+Mobile.waitForElementPresent(findTestObject('LoadingStage'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
 Mobile.waitForElementPresent(findTestObject('Register/txt/txt TERMS AND CONDITIONS'), 0)
 

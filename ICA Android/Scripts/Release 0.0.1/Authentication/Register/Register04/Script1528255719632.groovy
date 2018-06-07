@@ -43,7 +43,7 @@ Mobile.waitForElementPresent(findTestObject('Register/txt/txt E-Mail-Adresse'), 
 
 Mobile.waitForElementPresent(findTestObject('Register/edt/edtEmail'), 0)
 
-Mobile.setText(findTestObject('Register/edt/edtEmail'), FileCode.randomString()+'@gmail.com', 0)
+Mobile.setText(findTestObject('Register/edt/edtEmail'), FileCode.randomString() + '@gmail.com', 0)
 
 Mobile.waitForElementPresent(findTestObject('Register/txt/txt Passwort'), 0)
 
@@ -56,10 +56,6 @@ Mobile.waitForElementPresent(findTestObject('Register/txt/txt Passwort wiederhol
 Mobile.waitForElementPresent(findTestObject('Register/edt/edtRepass'), 0)
 
 Mobile.setText(findTestObject('Register/edt/edtRepass'), '12', 0)
-
-Mobile.waitForElementPresent(findTestObject('Register/checkbox/checkboxRecieveMail'), 0)
-
-Mobile.tap(findTestObject('Register/checkbox/checkboxRecieveMail'), 0)
 
 Mobile.waitForElementPresent(findTestObject('Register/btn/btn SubmitRegister'), 0)
 

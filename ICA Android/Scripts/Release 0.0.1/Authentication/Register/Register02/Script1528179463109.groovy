@@ -49,10 +49,6 @@ Mobile.waitForElementPresent(findTestObject('Register/txt/txt Passwort wiederhol
 
 Mobile.waitForElementPresent(findTestObject('Register/edt/edtRepass'), 0)
 
-Mobile.waitForElementPresent(findTestObject('Register/checkbox/checkboxRecieveMail'), 0)
-
-Mobile.tap(findTestObject('Register/checkbox/checkboxRecieveMail'), 0)
-
 Mobile.waitForElementPresent(findTestObject('Register/btn/btn SubmitRegister'), 0)
 
 Mobile.tap(findTestObject('Register/btn/btn SubmitRegister'), 0)
@@ -63,7 +59,7 @@ Mobile.scrollToText('E-Mail-Adresse ist erforderlich', FailureHandling.STOP_ON_F
 
 Mobile.scrollToText('Passwort ist erforderlich', FailureHandling.STOP_ON_FAILURE)
 
-Mobile.scrollToText('Passwort vergessen ist erforderlich', FailureHandling.STOP_ON_FAILURE)
+Mobile.scrollToText('Passwort wiederholen ist erforderlich', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.closeApplication()
 
