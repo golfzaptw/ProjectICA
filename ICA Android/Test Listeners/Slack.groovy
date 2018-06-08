@@ -37,46 +37,17 @@ class Slack {
 			WS.sendRequest(slackMessage)
 		}
 	}
-//	@BeforeTestSuite
-//	def notifyslackTestSuite(TestSuiteContext testSuiteContext){
-//		def value = testSuiteContext.getTestSuiteId().split('/')
-//		def result = value[value.size()-1]
-//		slackMessage.setHttpBody(	'{\
-//										"text : "TestSuite Android : '+ result +' : Running"\
-//									}')
-//	}
-//	
-////	@BeforeTestCase
-////	def notifyBeforeTestCase(TestCaseContext testCaseContext) {
-////
-////		slackMessage.setHttpBody('{"text": "Test APIs : ' + testCaseContext.getTestCaseId()+ ': Running"}"')
-////		postToSlack()
-////
-////	}
-//	
-//	@AfterTestCase
-//	def notifyAfterTestCase(TestCaseContext testCaseContext) {
-//
-//		testCaseStatus = testCaseContext.getTestCaseStatus()
-//		testCaseName = testCaseContext.getTestCaseId()
-//		def value = testCaseName.split('/')
-//		def result = value[value.size()-1]
-//		//Map variables = testCaseContext.getTestCaseVariables()
-////		slackMessage.setHttpBody('{"text": "Test APIs : ' + testCaseContext.getTestCaseId() + ': ' + testCaseStatus + '"}"')
-////		postToSlack()
-//		if (!testCaseStatus.equals("PASSED")){
-//			testSuiteStatus = "FAILED"
-//			slackMessage.setHttpBody('{"text": "Test Android : ' + result + ': ' + testCaseStatus + '"}')
-//			postToSlack()
-//		} 
-//	}
-//
-//	@AfterTestSuite
-//	def notifyslackTestSuiteAfter(TestSuiteContext testSuiteContext){
-//		def value = testSuiteContext.getTestSuiteId().split('/')
-//		def result = value[value.size()-1]
-//		slackMessage.setHttpBody(	'{\
-//										"text : "TestSuite Android : '+ result +' : ' + testSuiteStatus + '"\
-//									}')
-//	}
+	@AfterTestCase
+	def notifyAfterTestCase(TestCaseContext testCaseContext) {
+
+		testCaseStatus = testCaseContext.getTestCaseStatus()
+		testCaseName = testCaseContext.getTestCaseId()
+		def value = testCaseName.split('/')
+		def result = value[value.size()-1]
+		if (!testCaseStatus.equals("PASSED")){
+			testSuiteStatus = "FAILED"
+			slackMessage.setHttpBody('{"text": "Test Android : ' + result + ': ' + testCaseStatus + '"}')
+			postToSlack()
+		} 
+	}
  }
