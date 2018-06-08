@@ -17,7 +17,7 @@
    <httpBodyType>text</httpBodyType>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://hooks.slack.com/services/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</restUrl>
+   <restUrl>https://hooks.slack.com/services/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?=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

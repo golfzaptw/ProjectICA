@@ -34,17 +34,33 @@ Mobile.waitForElementPresent(findTestObject('Login/txt/txt LOGIN'), 0)
 
 Mobile.waitForElementPresent(findTestObject('Login/txt/txt E-Mail-Adresse'), 0)
 
-Mobile.setText(findTestObject('Login/edt/edtEmail'), 'psgolf11@gmail.com', 0)
+Mobile.setText(findTestObject('Login/edt/edtEmail'), 'psgolf12@gmail.com', 0)
 
 Mobile.waitForElementPresent(findTestObject('Login/txt/txt Passwort'), 0)
 
-Mobile.setText(findTestObject('Login/edt/edtPassword'), 'qqqqqqqq', 0)
+Mobile.setText(findTestObject('Login/edt/edtPassword'), '123123123', 0)
 
 Mobile.waitForElementPresent(findTestObject('Login/btn/btnSubmitLOGIN'), 0)
 
 Mobile.tap(findTestObject('Login/btn/btnSubmitLOGIN'), 0)
 
 Mobile.waitForElementPresent(findTestObject('LoadingStage'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Logout/btn Logout'), 0)
+
+Mobile.tap(findTestObject('Logout/btn Logout'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Logout/txt Ausloggen'), 0)
+
+Mobile.tap(findTestObject('Logout/txt Ausloggen'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Logout/btn OK'), 0)
+
+Mobile.tap(findTestObject('Logout/btn OK'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Login/txt/txt LOGIN'), 0)
+
+Mobile.waitForElementPresent(findTestObject('Login/txt/txt E-Mail-Adresse'), 0)
 
 Mobile.closeApplication()
 

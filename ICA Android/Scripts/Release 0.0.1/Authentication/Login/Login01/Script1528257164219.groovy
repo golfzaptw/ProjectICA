@@ -22,14 +22,17 @@ import internal.GlobalVariable as GlobalVariable
 
 Mobile.comment('Search location project for find folder android apk.')
 
+'Find Location Project for find apk'
 def appPath = RunConfiguration.getProjectDir() + GlobalVariable.ANDROID_APP
 
 Mobile.startApplication(appPath, false)
 
+'Wait button login for click to page login'
 Mobile.waitForElementPresent(findTestObject('Login/btn/btn LOGINPAGE'), 0)
 
 Mobile.tap(findTestObject('Login/btn/btn LOGINPAGE'), 0)
 
+'Wait for see element all'
 Mobile.waitForElementPresent(findTestObject('Login/txt/txt LOGIN'), 0)
 
 Mobile.waitForElementPresent(findTestObject('Login/txt/txt E-Mail-Adresse'), 0)
@@ -40,9 +43,11 @@ Mobile.waitForElementPresent(findTestObject('Login/btn/btnSubmitLOGIN'), 0)
 
 Mobile.tap(findTestObject('Login/btn/btnSubmitLOGIN'), 0)
 
+'See error wording'
 Mobile.scrollToText('E-Mail-Adresse ist erforderlich', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.scrollToText('Passwort ist erforderlich', FailureHandling.STOP_ON_FAILURE)
 
+'close application'
 Mobile.closeApplication()
 
