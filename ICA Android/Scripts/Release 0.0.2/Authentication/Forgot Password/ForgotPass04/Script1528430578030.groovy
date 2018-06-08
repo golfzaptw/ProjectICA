@@ -26,41 +26,30 @@ def appPath = RunConfiguration.getProjectDir() + GlobalVariable.ANDROID_APP
 
 Mobile.startApplication(appPath, false)
 
-Mobile.waitForElementPresent(findTestObject('Login/btn/btn LOGINPAGE'), 0)
+Mobile.waitForElementPresent(findTestObject('ForgotPass/btn/btn LOGIN'), 0)
 
-Mobile.tap(findTestObject('Login/btn/btn LOGINPAGE'), 0)
+Mobile.tap(findTestObject('ForgotPass/btn/btn LOGIN'), 0)
 
-Mobile.waitForElementPresent(findTestObject('Login/txt/txt LOGIN'), 0)
+Mobile.waitForElementPresent(findTestObject('ForgotPass/txt/txt Passwort vergessen'), 0)
 
-Mobile.waitForElementPresent(findTestObject('Login/txt/txt E-Mail-Adresse'), 0)
+Mobile.tap(findTestObject('ForgotPass/txt/txt Passwort vergessen'), 0)
 
-Mobile.setText(findTestObject('Login/edt/edtEmail'), 'psgolf12@gmail.com', 0)
+Mobile.waitForElementPresent(findTestObject('ForgotPass/txt/txt Passwort vergessen Top Page'), 0)
 
-Mobile.waitForElementPresent(findTestObject('Login/txt/txt Passwort'), 0)
+Mobile.waitForElementPresent(findTestObject('ForgotPass/txt/txt E-Mail-Adresse'), 0)
 
-Mobile.setText(findTestObject('Login/edt/edtPassword'), '123123123', 0)
+Mobile.waitForElementPresent(findTestObject('ForgotPass/edt Email'), 0)
 
-Mobile.waitForElementPresent(findTestObject('Login/btn/btnSubmitLOGIN'), 0)
+Mobile.setText(findTestObject('ForgotPass/edt Email'), FileCode.randomString() + '@gmail.com', 0)
 
-Mobile.tap(findTestObject('Login/btn/btnSubmitLOGIN'), 0)
+Mobile.waitForElementPresent(findTestObject('ForgotPass/btn/btn SENDEN'), 0)
 
-Mobile.waitForElementPresent(findTestObject('LoadingStage'), 0)
+Mobile.tap(findTestObject('ForgotPass/btn/btn SENDEN'), 0)
 
-Mobile.waitForElementPresent(findTestObject('Logout/btn Logout'), 0)
+Mobile.scrollToText('Passwort vergessen ist fehlgeschlagen.', FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Logout/btn Logout'), 0)
+Mobile.scrollToText('Entschuldigung! Diese E-Mail-Adresse ist nicht gefunden.', FailureHandling.STOP_ON_FAILURE)
 
-Mobile.waitForElementPresent(findTestObject('Logout/txt Ausloggen'), 0)
-
-Mobile.tap(findTestObject('Logout/txt Ausloggen'), 0)
-
-Mobile.waitForElementPresent(findTestObject('Logout/btn OK'), 0)
-
-Mobile.tap(findTestObject('Logout/btn OK'), 0)
-
-Mobile.waitForElementPresent(findTestObject('Login/txt/txt LOGIN'), 0)
-
-Mobile.waitForElementPresent(findTestObject('Login/txt/txt E-Mail-Adresse'), 0)
-
+'close application'
 Mobile.closeApplication()
 
