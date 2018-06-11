@@ -13,9 +13,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.w
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.mobile.contribution.MobileDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\IDOLPH~1\\AppData\\Local\\Temp\\Katalon\\Test Cases\\New Test Case\\20180608_130636\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\IDOLPH~1\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Release 0.0.3\\Change Password\\ChangePassword01\\20180611_134809\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/New Test Case', new TestCaseBinding('Test Cases/New Test Case', [:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Release 0.0.3/Change Password/ChangePassword01', new TestCaseBinding('Test Cases/Release 0.0.3/Change Password/ChangePassword01', [:]), FailureHandling.STOP_ON_FAILURE , false)
     
